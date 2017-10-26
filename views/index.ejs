@@ -8,11 +8,13 @@
 <form action="/users" method="post">
   <input type="text" name="username" placeholder="username">
   <input type="password" name="password" placeholder="password">
+  <input type="date" name="birthdate" placeholder="birthdate">
   <input type="submit" value="Add User">
 </form>
 
 <ul>
 <% for (var i =0; i< users.length; i++) { %>
   <li><a href=/users/<%= users[i].id %>> <%= users[i].username %></a></li>
+  <li><%= users[i].birthdate.toDateString() %></li>
 <% } %>
 </ul>
